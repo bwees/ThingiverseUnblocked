@@ -1,0 +1,10 @@
+{
+    "name": "Thingiverse Unblocked",
+    "description": "Remove the adblock blocker from Thingiverse downloads",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": ["webRequest", "*://*.thingiverse.com/*"],   
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
