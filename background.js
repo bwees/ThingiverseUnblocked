@@ -20,8 +20,8 @@ function logURL(requestDetails) {
         // make list of all direct_url attributes in data
         var direct_urls = []
         for (var i = 0; i < data.length; i++) {
-            if (data[i].direct_url) {
-                direct_urls.push(data[i].direct_url)
+            if (data[i].public_url) {
+                direct_urls.push(data[i].public_url)
             }
         }
 

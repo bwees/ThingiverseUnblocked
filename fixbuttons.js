@@ -13,6 +13,7 @@ function updateButtons(delay = true) {
             if (parent.className.includes("ThingFile__download")) {
                 button.innerHTML = "Download"
                 parent.href = fileList[fileIndex]
+                console.log(fileList[fileIndex])
                 fileIndex++
             }
         }
@@ -21,14 +22,12 @@ function updateButtons(delay = true) {
     // Fix download all zip file button
     var buttons = document.getElementsByClassName("button")
     // for each buttons, if the parent elemnt has class name that contains "ThingFile", then print "found"
-    var fileIndex = 0
     for (var i = 0; i < buttons.length; i++) {
         var button = buttons[i]
         var parent = button.parentElement
         if (parent.className.includes("SidebarMenu__download")) {
             button.innerHTML = "Download All Files"
             parent.href = getZIPURL()
-            fileIndex++
         }
     }
 }
